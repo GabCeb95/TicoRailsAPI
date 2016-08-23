@@ -1,0 +1,27 @@
+{
+  "name": "apimoviles",
+  "version": "1.0.0",
+  "description": "Restfull API's",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "API",
+    "Sismos",
+    "Moviles"
+  ],
+  "author": "José Pablo Rodríguez Rojas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0"
+  },
+  "engines": {
+    "node": "6.2.0",
+    "npm": "3.8.9"
+  }
+}
