@@ -1,14 +1,14 @@
 /*
-* API Moviles
+* API TicoRails
 */
 
 var express = require('express'),
 	app = express(),
 	logger = require('morgan'),
 	mongoose = require('mongoose'),
-	dbURL = 'mongodb://jose:root@ds019633.mlab.com:19633/earthquakes',
+	dbURL = 'mongodb://ticorailsdbo:root12345@ds041506.mlab.com:41506/ticorailsdb',
 	bodyParser = require('body-parser'),
-	terremotosRouter = require('./routes/earthquakes.route.js');
+	ticoRailsRouter = require('./routes/ticorails.route.js');
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json 
 app.use(bodyParser.json());
 
-app.use('/api',terremotosRouter);
+app.use('/api',ticoRailsRouter);
 
 app.use(function(req,res) {
 	res.status(404)
