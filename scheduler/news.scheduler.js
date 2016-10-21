@@ -4,7 +4,7 @@ var rss = require('./libs/rss');
 var ctrlNews = require('../controllers/news.controller.js');
 
 
-var job = new CronJob('0 */1 * * * *', function() { // Updating news every 35 minutes
+var job = new CronJob('0 */35 * * * *', function() { // Updating news every 35 minutes
     console.log('Init \n');
     rss.read('http://www.nacion.com/rss/latest/?contentType=NWS',function(result){
       try {
