@@ -5,10 +5,39 @@ require('../models/news.model.js');
 var mongoose = require('mongoose'),
 	News = mongoose.model('News');
 
-module.exports.listAll = function listAll(req,res) {
+module.exports.listAll = function listAll(req,res) { 
 	News.find().exec(function(err,data){
 		res.status(200).json(data);
 	});
+};
+
+module.exports.createNewsItem = function FeedNews(req,res) {
+    
+    mongoose.connection.collections['news'].drop( function(err) {// cleaning news collection
+        console.log('news dropped');
+    });
+
+    for(var i=0; i<req.length; i++){
+
+        console.log('\nStarted ****\n');
+        var newsItem = new News();
+
+        newsItem.title = req[i].title
+        newsItem.date = req[i].date
+        newsItem.text = req[i].text
+        newsItem.source = req[i].source
+
+        console.log('Created ****\n');
+
+        newsItem.save(function(err){
+            /*if(err){
+			    res.status(404).json({error:err});
+		    }else{
+			    res.status(201).json(newsItem);
+		    }*/
+        });
+        console.log('Saved ****\n');
+    }
 };
 
 /*
@@ -32,24 +61,6 @@ module.exports.listById = function listById(req,res) {
 	 res.status(404).json({message:'No id in request'});
 }
 };
-
-module.exports.createEarthquake = function createearthquake(req,res) {
-	
-	var earthquake = new Earthquake();
-	
-	earthquake.magnitud = req.body.magnitud
-	earthquake.epicentro = req.body.epicentro
-
-	earthquake.save(function(err){
-		if(err){
-			res.status(404).json({error:err});
-		}else{
-			res.status(201).json(earthquake);
-		}
-
-	});
-};
-
 
 module.exports.updateEarthquake = function updateearthquake(req,res) {
 	var earthquakeid = req.params.earthquakeid;

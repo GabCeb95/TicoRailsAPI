@@ -8,7 +8,8 @@ var express = require('express'),
 	mongoose = require('mongoose'),
 	dbURL = 'mongodb://ticorailsdbo:root12345@ds041506.mlab.com:41506/ticorailsdb',
 	bodyParser = require('body-parser'),
-	ticoRailsRouter = require('./routes/ticorails.route.js');
+	ticoRailsRouter = require('./routes/ticorails.route.js'),
+	scheduler = require('./scheduler/news.scheduler');
 
 app.set('port', (process.env.PORT || 5000));
 
