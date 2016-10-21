@@ -1,5 +1,5 @@
 {
-  "name": "apimoviles",
+  "name": "TicoRails API",
   "version": "1.0.0",
   "description": "Restfull API's",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "Sismos",
     "Moviles"
   ],
-  "author": "José Pablo Rodríguez Rojas",
+  "author": "Rebeca Cerdas, Alvaro Lopez, Jose Rodriguez, Gabriel Vargas",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
