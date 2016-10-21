@@ -10,7 +10,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	ticoRailsRouter = require('./routes/ticorails.route.js');
 
-app.set('port', (3100));
+app.set('port', (process.env.PORT || 5000));
 
 mongoose.connect(dbURL);
 

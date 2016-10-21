@@ -1,5 +1,5 @@
 {
-  "name": "TicoRails API",
+  "name": "ticorailsapi",
   "version": "1.0.0",
   "description": "Restfull API's",
   "main": "index.js",
