@@ -26,6 +26,12 @@ app.use(bodyParser.json());
 
 app.use('/api',ticoRailsRouter);
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(function(req,res) {
 	res.status(404)
 	   .send('The resource '+req.url+' does not exists...');
