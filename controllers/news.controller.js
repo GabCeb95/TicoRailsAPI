@@ -24,7 +24,7 @@ module.exports.createNewsItem = function FeedNews(req,res) {
 
         newsItem.title = req[i].title
         newsItem.date = req[i].date
-        newsItem.text = req[i].text
+        newsItem.text = req[i].text.replace(/width/i, " ").replace(/height/i, " ");
         newsItem.source = req[i].source
 
         console.log('Created ****\n');
