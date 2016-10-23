@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 
 var newsSchema = mongoose.Schema({
 	title:{type:String,require: true},
-	date: Date,
+	date: String,
 	text: String,
 	source: String
 },{collection:'news'});

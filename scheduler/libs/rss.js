@@ -20,7 +20,7 @@
                 var pubTime = pubDate.getHours() + ":" + pubDate.getMinutes();
 
                 pubDate = pubDate.getFullYear() + "-" + (pubDate.getMonth() + 1) + "-" + pubDate.getDate();
-                pubDate = dateTime.convertFormatGeorgian(pubDate);
+                //pubDate = dateTime.convertFormatGeorgian(pubDate);
 
                 jsonResult.push({
         
