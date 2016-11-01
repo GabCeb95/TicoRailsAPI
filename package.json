@@ -1,5 +1,5 @@
 {
-  "name": "apimoviles",
+  "name": "ticorailsapi",
   "version": "1.0.0",
   "description": "Restfull API's",
   "main": "index.js",
@@ -9,19 +9,27 @@
   },
   "keywords": [
     "API",
-    "Sismos",
-    "Moviles"
+    "Tico Rails",
+    "Trenes"
   ],
-  "author": "José Pablo Rodríguez Rojas",
+  "author": "Rebeca Cerdas, Alvaro Lopez, Jose Rodriguez, Gabriel Vargas",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "cron": "^1.1.1",
     "express": "^4.13.4",
+    "feed-read": "0.0.1",
+    "moment": "^2.15.2",
+    "moment-jalaali": "^0.4.0",
     "mongoose": "^4.4.19",
     "morgan": "^1.7.0"
   },
   "engines": {
     "node": "6.2.0",
     "npm": "3.8.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GabCeb95/TicoRailsAPI"
   }
 }
