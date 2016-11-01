@@ -23,6 +23,8 @@ router.get('/updateNews', function(req, res, next) { // If we want to update the
 
 router.get('/station/',ctrlStation.listAll);
 
+router.get('/station/:id',ctrlStation.listById);
+
 router.get('/route/',ctrlRoute.listAll);
 
 router.get('/route/:id',ctrlRoute.listById);
