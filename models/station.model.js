@@ -5,10 +5,10 @@
 var mongoose = require('mongoose');
 
 var stationSchema = mongoose.Schema({ //Missing data schema
-	_id:{type:String,require:true,unique:true},
+	_id:{type:Number,require:true,unique:true},
 	name:{type:String,require: true},
-	lat: String,
-	lng: String
+	lat: Number,
+	lng: Number
 },{collection:'station'});
 
 var Station = mongoose.model('Station',stationSchema);
