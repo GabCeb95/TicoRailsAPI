@@ -1,10 +1,10 @@
 /*
-* Route Model
+* Train Model
 */
 
 var mongoose = require('mongoose');
 
-var routeSchema = mongoose.Schema({ //Missing data schema
+var trainSchema = mongoose.Schema({ //Missing data schema
 	nombre:{type:String,require: true},
 	rutas:[{
 		nombre:{typre:String},
@@ -20,8 +20,8 @@ var routeSchema = mongoose.Schema({ //Missing data schema
 			}]
 		}]
 	}]
-},{collection:'route'});
+},{collection:'train'});
 
-var Route = mongoose.model('Route',routeSchema);
+var Train = mongoose.model('Train',trainSchema);
 
-module.exports = Route;
+module.exports = Train;

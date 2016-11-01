@@ -6,7 +6,7 @@ var express = require('express'),
 	router = express.Router(),
 	ctrlNews = require('../controllers/news.controller.js'),
 	ctrlStation = require('../controllers/station.controller.js'),
-	ctrlRoute = require('../controllers/route.controller.js'),
+	ctrlTrain = require('../controllers/train.controller.js'),
 	rss = require('../scheduler/libs/rss');/*
 	usuarioCtrl = require('../controllers/usuario.controller.js');*/
 
@@ -25,9 +25,9 @@ router.get('/station/',ctrlStation.listAll);
 
 router.get('/station/:id',ctrlStation.listById);
 
-router.get('/route/',ctrlRoute.listAll);
+router.get('/train/',ctrlTrain.listAll);
 
-router.get('/route/:id',ctrlRoute.listById);
+router.get('/train/:id',ctrlTrain.listById);
 
 /*
 router.get('/news/:id',ctrlNews.listById);
