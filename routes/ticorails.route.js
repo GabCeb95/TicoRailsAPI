@@ -7,6 +7,7 @@ var express = require('express'),
 	ctrlNews = require('../controllers/news.controller.js'),
 	ctrlStation = require('../controllers/station.controller.js'),
 	ctrlTrain = require('../controllers/train.controller.js'),
+	ctrlUser = require('../controllers/user.controller.js'),
 	rss = require('../scheduler/libs/rss');/*
 	usuarioCtrl = require('../controllers/usuario.controller.js');*/
 
@@ -29,27 +30,10 @@ router.get('/train/',ctrlTrain.listAll);
 
 router.get('/train/:id',ctrlTrain.listById);
 
-/*
-router.get('/news/:id',ctrlNews.listById);
+router.get('/user/:id',ctrlUser.listById);
 
-router.post('/news/',ctrlNews.createNewsItem);
+router.get('/user/:user/:pass',ctrlUser.isUserValid);
 
-router.put('/news/:id',ctrlNews.updateNewsItem);
-
-router.delete('/news/:id',ctrlNews.deleteNewsItem);
-
-// USUARIOS ROUTES
-
-router.get('/usuarios',usuarioCtrl.listAll);
-
-router.get('/usuarios/:id',usuarioCtrl.listById);
-
-router.post('/usuarios/',usuarioCtrl.createUsuario);
-
-router.put('/usuarios/:id',usuarioCtrl.updateUsuario);
-
-router.delete('/usuarios/:id',usuarioCtrl.deleteUsuario);
-
-router.get('/login/:id',usuarioCtrl.byUser);*/
+router.post('/user/',ctrlUser.createUser);
 
 module.exports = router;
